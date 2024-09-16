@@ -1,40 +1,31 @@
 "use client"
 import React, { useState } from 'react';
 import Link from "next/link";
-// import Image from "next/image";
 import { motion } from "framer-motion";
 import { FiSun, FiMoon, FiX, FiMenu } from "react-icons/fi";
-import useTheme from "../../../hooks/useThemeSwitcher";
+import { useTheme } from 'next-themes'; // Import useTheme from next-themes
+import HireMeModal from '@/components/hireMe/HireMeModal';
 
-
-const Navbar = () => {
-    const [showMenu, setShowMenu] = useState(false);
+const Navbar: React.FC = () => {
+  const [showMenu, setShowMenu] = useState(false);
   const [showModal, setShowModal] = useState(false);
-  const [activeTheme, setTheme] = useTheme();
+  const { theme, setTheme } = useTheme(); // Use next-themes hook
 
   function toggleMenu() {
-    if (!showMenu) {
-      setShowMenu(true);
-    } else {
-      setShowMenu(false);
-    }
+    setShowMenu(prevState => !prevState);
   }
 
   function showHireMeModal() {
     if (!showModal) {
-      document
-        .getElementsByTagName("html")[0]
-        .classList.add("overflow-y-hidden");
+      document.getElementsByTagName("html")[0].classList.add("overflow-y-hidden");
       setShowModal(true);
     } else {
-      document
-        .getElementsByTagName("html")[0]
-        .classList.remove("overflow-y-hidden");
+      document.getElementsByTagName("html")[0].classList.remove("overflow-y-hidden");
       setShowModal(false);
     }
   }
 
-return (
+  return (
     <motion.nav
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
@@ -45,20 +36,19 @@ return (
       <div className="z-10 max-w-screen-lg xl:max-w-screen-xl block sm:flex sm:justify-between sm:items-center py-6">
         {/* Header menu links and small screen hamburger menu */}
         <div className="flex justify-between items-center px-4 sm:px-0">
-          <div className=" text-left text-2xl text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2 border-t-2 pt-3 sm:pt-2 sm:border-t-0 border-primary-light dark:border-secondary-dark font-bold">
+          <div className="text-left text-2xl text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light sm:mx-4 mb-2 sm:py-2 border-t-2 pt-3 sm:pt-2 sm:border-t-0 border-primary-light dark:border-secondary-dark font-bold">
             <Link href="/">
-              
               Masoud
             </Link>
           </div>
 
           {/* Theme switcher small screen */}
           <div
-            onClick={() => setTheme(activeTheme)}
+            onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')} // Toggle theme
             aria-label="Theme Switcher"
             className="block sm:hidden ml-0 bg-primary-light dark:bg-ternary-dark p-3 shadow-sm rounded-xl cursor-pointer"
           >
-            {activeTheme === "dark" ? (
+            {theme === "dark" ? (
               <FiMoon className="text-ternary-dark hover:text-gray-400 dark:text-ternary-light dark:hover:text-primary-light text-xl" />
             ) : (
               <FiSun className="text-gray-200 hover:text-gray-50 text-xl" />
@@ -96,17 +86,17 @@ return (
               : "hidden"
           }
         >
-          <div className="block text-left text-lg text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2">
+          <div className="block text-left text-lg text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light sm:mx-4 mb-2 sm:py-2">
             <Link href="/projects" aria-label="Projects">
               Projects
             </Link>
           </div>
-          <div className="block text-left text-lg text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2 border-t-2 pt-3 sm:pt-2 sm:border-t-0 border-primary-light dark:border-secondary-dark">
+          <div className="block text-left text-lg text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light sm:mx-4 mb-2 sm:py-2 border-t-2 pt-3 sm:pt-2 sm:border-t-0 border-primary-light dark:border-secondary-dark">
             <Link href="/about" aria-label="About Me">
               About Me
             </Link>
           </div>
-          <div className="block text-left text-lg text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2 border-t-2 pt-3 sm:pt-2 sm:border-t-0 border-primary-light dark:border-secondary-dark">
+          <div className="block text-left text-lg text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light sm:mx-4 mb-2 sm:py-2 border-t-2 pt-3 sm:pt-2 sm:border-t-0 border-primary-light dark:border-secondary-dark">
             <Link href="/contact" aria-label="Contact">
               Contact
             </Link>
@@ -125,20 +115,19 @@ return (
         {/* Header links large screen */}
         <div className="font-general-medium hidden m-0 sm:ml-4 mt-5 sm:mt-3 sm:flex p-5 sm:p-0 justify-center items-center shadow-lg sm:shadow-none">
           <div
-            className="block text-left text-lg font-medium text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2"
+            className="block text-left text-lg font-medium text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light sm:mx-4 mb-2 sm:py-2"
             aria-label="Projects"
           >
             <Link href="/projects">Projects</Link>
           </div>
           <div
-            className="block text-left text-lg font-medium text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2"
+            className="block text-left text-lg font-medium text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light sm:mx-4 mb-2 sm:py-2"
             aria-label="About Me"
           >
             <Link href="/about-me">About Me</Link>
           </div>
-
           <div
-            className="block text-left text-lg font-medium text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2"
+            className="block text-left text-lg font-medium text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light sm:mx-4 mb-2 sm:py-2"
             aria-label="Contact"
           >
             <Link href="/contact">Contact</Link>
@@ -159,11 +148,11 @@ return (
 
           {/* Theme switcher large screen */}
           <div
-            onClick={() => setTheme(activeTheme)}
+            onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')} // Toggle theme
             aria-label="Theme Switcher"
             className="ml-8 bg-primary-light dark:bg-ternary-dark p-3 shadow-sm rounded-xl cursor-pointer"
           >
-            {activeTheme === "dark" ? (
+            {theme === "dark" ? (
               <FiMoon className="text-ternary-dark hover:text-gray-400 dark:text-ternary-light dark:hover:text-primary-light text-xl" />
             ) : (
               <FiSun className="text-gray-200 hover:text-gray-50 text-xl" />
@@ -171,18 +160,11 @@ return (
           </div>
         </div>
       </div>
-      <div>
-        {showModal ? (
-          <HireMeModal onClose={showHireMeModal} onRequest={showHireMeModal} />
-        ) : null}
-        {showModal ? showHireMeModal : null}
-      </div>
+      {showModal && <HireMeModal onClose={showHireMeModal} onRequest={showHireMeModal} />}
     </motion.nav>
   );
 };
 
 export default Navbar;
 
-function useThemeSwitcher(): [any, any] {
-    throw new Error('Function not implemented.');
-}
+
