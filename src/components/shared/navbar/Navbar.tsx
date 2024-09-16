@@ -3,13 +3,13 @@ import React, { useState } from 'react';
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { FiSun, FiMoon, FiX, FiMenu } from "react-icons/fi";
-import { useTheme } from 'next-themes'; // Import useTheme from next-themes
+import { useTheme } from 'next-themes'; 
 import HireMeModal from '@/components/hireMe/HireMeModal';
 
 const Navbar: React.FC = () => {
   const [showMenu, setShowMenu] = useState(false);
   const [showModal, setShowModal] = useState(false);
-  const { theme, setTheme } = useTheme(); // Use next-themes hook
+  const { theme, setTheme } = useTheme(); 
 
   function toggleMenu() {
     setShowMenu(prevState => !prevState);
