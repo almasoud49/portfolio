@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/shared/navbar/Navbar";
 import { AnimatePresence } from "framer-motion";
 import { ThemeProvider } from "next-themes";
+import Footer from "@/components/shared/footer/Footer";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -36,6 +37,7 @@ export default function RootLayout({
         <div  className=" bg-secondary-light dark:bg-primary-dark transition duration-300">
         <Navbar/>
           <div>{children}</div>
+          <Footer/>
         </div>
         </AnimatePresence>
         </ThemeProvider>

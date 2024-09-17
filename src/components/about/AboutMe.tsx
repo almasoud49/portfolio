@@ -6,7 +6,7 @@ const AboutMe = () => {
     <div className="block sm:flex sm:gap-10 mt-10 sm:mt-20">
       <div className="w-full sm:w-1/4 mb-7 sm:mb-0">
         <Image
-          src="/images/profile.jpeg"
+          src="/images/masoud.jpg"
           width={200}
           height={200}
           className="rounded-lg"
