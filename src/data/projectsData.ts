@@ -87,7 +87,7 @@ export const projectsData = [
 		title: 'Tourista Travels',
 		category: 'Web Application',
 		img: '/images/travel1.jpg',
-		description:'TouristaTravels is a service review website where users can explore various travel services, view detailed service information, and submit their own reviews. It includes user authentication, service listing, and review features functionality.',
+		description:'TouristaTravels is a service review website where users can explore various travel services, view detailed service information, and submit their own reviews. It includes user review features functionality.',
 		LiveLink: 'https://touristatravels-d9cb9.firebaseapp.com', 
   GitHub: {
     Client: 'https://github.com/almasoud49/touristaTravels-client',
