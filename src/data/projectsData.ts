@@ -7,6 +7,12 @@ export const projectsData = [
 		title: 'Old Car Hat',
 		category: 'Web Application',
 		img: '/images/old-car1.jpg',
+		description:'OldCarHat is a second-hand car resale platform where users can buy, sell, and advertise used cars. The app offers seamless user experiences with role-based access, car categorization, and secure payment processing via Stripe.',
+		LiveLink: 'https://oldcarhat.firebaseapp.com', 
+  GitHub: {
+    Client: 'https://github.com/almasoud49/OldCarHat-client',
+    Server: 'https://github.com/almasoud49/OldCarHat-server',
+  },
 		ProjectHeader: {
 			title: 'Old Car Hat',
 			publishDate: 'Sep 15, 2024',
@@ -32,7 +38,7 @@ export const projectsData = [
 		ProjectInfo: {
 			ProjectHeading: 'About Project',
       ProjectOverview:
-				'This  is a  used products(second-hand products) related  application with the ability to advertise a product',
+				'OldCarHat is a second-hand car resale platform where users can buy, sell, and advertise used cars. The app offers seamless user experiences with role-based access, car categorization, and secure payment processing via Stripe.',
 		
 			ObjectivesHeading: 'Objective',
 			ObjectivesDetails:
@@ -58,12 +64,17 @@ export const projectsData = [
 				{
 					id: uuidv4(),
 					details:
-						'Admin and User panel created.',
+						'Personalized dashboards for buyers, sellers, and admins.',
 				},
 				{
 					id: uuidv4(),
 					details:
-						'Anyone can buy products after signing up or log in to their account.',
+						'Secure car booking and payment integration.',
+				},
+				{
+					id: uuidv4(),
+					details:
+						'Admins verify sellers, showing a blue tick.',
 				},
 				
 			],
@@ -73,40 +84,46 @@ export const projectsData = [
 	},
 	{
 		id: 2,
-		title: 'Tech Training Hub',
+		title: 'Tourista Travels',
 		category: 'Web Application',
-		img: '/images/tech-training1.jpg',
+		img: '/images/travel1.jpg',
+		description:'TouristaTravels is a service review website where users can explore various travel services, view detailed service information, and submit their own reviews. It includes user authentication, service listing, and review features functionality.',
+		LiveLink: 'https://touristatravels-d9cb9.firebaseapp.com', 
+  GitHub: {
+    Client: 'https://github.com/almasoud49/touristaTravels-client',
+    Server: 'https://github.com/almasoud49/touristaTravels-server',
+  },
 		ProjectHeader: {
-			title: 'Tech Training Hub',
+			title: 'Tourista Travels',
 			publishDate: 'Sep 15, 2024',
 			tags: 'Full Stuck',
 		},
 		ProjectImages: [
 			{
 				id: uuidv4(),
-				title: 'Tech Training Hub',
-				img: '/images/tech-training2.jpg',
+				title: 'Tourista Travels',
+				img: '/images/travel1.jpg',
 			},
 			{
 				id: uuidv4(),
-				title: 'Tech Training Hub',
-				img: '/images/tech-training1.jpg',
+				title: 'Tourista Travels',
+				img: '/images/travel2.jpg',
 			},
 			{
 				id: uuidv4(),
-				title: 'Tech Training Hub',
-				img: '/images/tech-training3.jpg',
+				title: 'Tourista Travels',
+				img: '/images/travel3.jpg',
 			},
 		],
 		ProjectInfo: {
 			ProjectHeading: 'About Project',
       ProjectOverview:
-				'This web application focuses on quality services with honest user reviews.',
+				'TouristaTravels is a service review website where users can explore various travel services, view detailed service information, and submit their own reviews.',
 		
 			
 			ObjectivesHeading: 'Objective',
 			ObjectivesDetails:
-				' Online trainer review',
+				' Online service review website',
 			Technologies: [
 				{
 					title: 'Tools & Technologies',
@@ -128,17 +145,17 @@ export const projectsData = [
 				{
 					id: uuidv4(),
 					details:
-						'This is a fully functional responsive website',
+						'Service Listing and Detailed Views',
 				},
 				{
 					id: uuidv4(),
 					details:
-						'Focuses on quality services with honest user reviews',
+						'Email and Social Login',
 				},
 				{
 					id: uuidv4(),
 					details:
-						'Custom sign-up form & social login implemented',
+						'Submit, Edit, and Delete Reviews',
 				},
 
 			],
@@ -151,6 +168,12 @@ export const projectsData = [
 		title: 'Bike Rent Reservation System',
 		category: 'Web Application',
 		img: '/images/bike1.jpg',
+		description:'A comprehensive Bike Rental Service that enables users to book bikes, manage rentals, and access their profiles, while providing admins with tools for bike and user management where key features',
+		LiveLink: 'https://bike-rental-reservation-service.vercel.app', 
+  GitHub: {
+    Client: 'https://github.com/almasoud49/bike-rental-reservation-service',
+    Server: 'https://github.com/almasoud49/bike-rental-reservation-system-backend',
+  },
 		ProjectHeader: {
 			title: 'Bike Rent Reservation System',
 			publishDate: 'Sep 15, 2024',
@@ -198,7 +221,17 @@ export const projectsData = [
 				{
 					id: uuidv4(),
 					details:
-						'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt totam dolorum, ducimus obcaecati, voluptas facilis molestias nobis ut quam natus similique inventore excepturi optio ipsa deleniti fugit illo. Unde, amet! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum illo necessitatibus perspiciatis! Aperiam perferendis labore temporibus, eos culpa corporis recusandae quas, fuga voluptatibus nesciunt odit libero tenetur neque consequatur ea.',
+						'View rentals, manage bookings, update info, and access payment history',
+				},
+				{
+					id: uuidv4(),
+					details:
+						'Bike listing, filtering, and booking with payment integration',
+				},
+				{
+					id: uuidv4(),
+					details:
+						'Admin controls for bike, user, and rental management',
 				},
 				
 			],
@@ -211,6 +244,12 @@ export const projectsData = [
 		title: 'Baby Care Store',
 		category: 'Web Application',
 		img: '/images/baby-store1.jpg',
+		description:'Baby Care Marketplace is a user-friendly platform designed for effortless browsing and purchasing of baby care products with an enhanced, responsive UI with features.',
+		LiveLink: 'https://baby-cares-store.vercel.app', 
+  GitHub: {
+    Client: 'https://github.com/almasoud49/baby-care-store-client',
+    Server: 'https://github.com/almasoud49/baby-care-store-server',
+  },
 		ProjectHeader: {
 			title: 'Baby Care Store',
 			publishDate: 'Sep 15, 2024',
@@ -259,7 +298,17 @@ export const projectsData = [
 				{
 					id: uuidv4(),
 					details:
-						'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt totam dolorum, ducimus obcaecati, voluptas facilis molestias nobis ut quam natus similique inventore excepturi optio ipsa deleniti fugit illo. Unde, amet! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum illo necessitatibus perspiciatis! Aperiam perferendis labore temporibus, eos culpa corporis recusandae quas, fuga voluptatibus nesciunt odit libero tenetur neque consequatur ea.',
+						'User-friendly product browsing and filtering for easy navigation through various baby care items',
+				},
+				{
+					id: uuidv4(),
+					details:
+						'Cart and checkout system with product reviews and a "Cash on Delivery" payment option',
+				},
+				{
+					id: uuidv4(),
+					details:
+						'Admin controls for product management, order status updates, and user review moderation',
 				},
 
 			],

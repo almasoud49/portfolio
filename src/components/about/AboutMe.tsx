@@ -14,7 +14,7 @@ const AboutMe = () => {
         />
       </div>
       <div className="font-general-regular w-full sm:w-3/4 text-left">
-        <p className="mb-4 text-ternary-dark dark:text-ternary-light text-lg">
+        <p className="mb-4 text-ternary-dark dark:text-ternary-light text-lg ">
           As a passionate and motivated full-stack web developer, I have
           recently embarked on my professional journey, equipped with a strong
           foundation in both front-end and back-end technologies. I specialize
